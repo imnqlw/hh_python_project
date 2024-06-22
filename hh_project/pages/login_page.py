@@ -1,10 +1,20 @@
 import allure
 from selene import command
 from selene import browser, have
+from dotenv import load_dotenv
+import os
+
+name = os.getenv('name')
+passw = os.getenv('passw')
+load_dotenv()
 
 
 @allure.tag("WEB")
 class MainPage:
+
+    def load_env(self):
+        load_dotenv()
+
     @allure.step('Открытие страницы')
     def open(self):
         browser.open('/')
@@ -53,8 +63,21 @@ class MainPage:
     def should_have_resume(self):
         browser.close_current_tab()
         browser.switch_to_tab(0)
-        #browser.element('[data-qa="resume-block-title-position"]').should(have.text('Програмист'))
         browser.element('[data-qa="resume-block-experience"]').should(have.text('Яндекс'))
+
+    @allure.step('Авторизация')
+    def login(self):
+        browser.open('https://saratov.hh.ru/')
+        browser.element('[href="/account/login?backurl=%2F&hhtmFrom=main"]').click()
+        browser.element('[data-qa="expand-login-by-password"]').click()
+        browser.element('[data-qa="login-input-username"]').type(name)
+        browser.element('[data-qa="login-input-password"]').type(passw)
+        browser.element('[data-qa="account-login-submit"]').click()
+
+    def check_login(self):
+        browser.element('[data-qa="mainmenu_applicantProfile"]').click()
+        browser.element('[href="/applicant/settings?from=header_new&hhtmFromLabel=header_new&hhtmFrom=main"]').click()
+        browser.element('[data-template-name="fio"]').should(have.text('Quru'))
 
     @allure.step('Выбор города')
     def select_city(self):

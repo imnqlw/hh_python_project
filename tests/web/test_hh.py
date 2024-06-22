@@ -1,6 +1,6 @@
 import allure
 
-from hh_project.pages.home_page import MainPage
+from hh_project.pages.login_page import MainPage
 
 
 @allure.tag("WEB")
@@ -28,12 +28,6 @@ def test_login():
     main.login()
 
 
-
-
-
-
-
-
 @allure.title('Поиск компании')
 @allure.epic('Компания')
 @allure.story('Ищем компанию')
@@ -46,6 +40,7 @@ def test_search_company():
     main.find_company()
     main.check_company()
 
+
 @allure.title('Поиск резюме')
 @allure.epic('Резюме')
 @allure.story('Ищем резюме')
@@ -57,6 +52,7 @@ def test_search_resume():
     main = MainPage()
     main.search_resume()
     main.check_resume()
+
 
 @allure.title('Поиск работы')
 @allure.epic('Работа')
