@@ -1,9 +1,9 @@
 import os
 
-from jsonschema import validate
+
 from dotenv import load_dotenv
 
-from hh_project.schemas.json import python
+
 from hh_project.utils.api_helper import api_request
 
 name = os.getenv('name')
