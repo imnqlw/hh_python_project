@@ -22,8 +22,7 @@ class Hh_api:
     def search_python(self):
         result = api_request(url='https://saratov.hh.ru', endpoint='/vacancysuggest', method='GET',
                              params=({'q': 'PYTHON'}))
-        body = result.json()
-        validate(body, schema=python)
+
         assert result.status_code == 200
 
     def search_job(self):

@@ -43,7 +43,7 @@ class MainPage:
         browser.element('#a11y-search-input').type('Python').press_enter()
         browser.element('[data-qa="bloko-modal-close"]').click()
         browser.element('[name=part_time][value=start_after_sixteen]+span').click()
-        browser.element('[name=salary][value="40000"]+span').perform(command.js.scroll_into_view).click()
+        browser.element('[name=salary][value="45000"]+span').perform(command.js.scroll_into_view).click()
         browser.element('[class=bloko-checkbox__input][value="124"]+span').perform(command.js.scroll_into_view).click()
         browser.element('[name=education][value="not_required_or_not_specified"]+span').click()
 
