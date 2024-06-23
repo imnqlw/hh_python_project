@@ -13,11 +13,24 @@
 
 
 ## Список проверок, реализованных в web UI автотестах
-- Выбор города
-- Поиск работы
-- Поиск резюме
-- Поиск компании
-- Проверка выполненых задач
+<p><img width="44" align="center" src="img/active.PNG" alt="checkbox"> Выбор города</p> 
+<p><img width="44" align="center" src="img/active.PNG" alt="checkbox"> Поиск работы</p> 
+<p><img width="44" align="center" src="img/active.PNG" alt="checkbox"> Поиск резюме</p> 
+<p><img width="44" align="center" src="img/active.PNG" alt="checkbox"> Поиск компании</p> 
+<p><img width="44" align="center" src="img/active.PNG" alt="checkbox"> Проверка выполненых задач</p> 
+
+## Список проверок, реализованных API tests:
+<p><img width="44" align="center" src="img/active.PNG" alt="checkbox"> Выбор города</p>
+<p><img width="44" align="center" src="img/active.PNG" alt="checkbox"> Поиск работы</p>
+<p><img width="44" align="center" src="img/active.PNG" alt="checkbox"> Поиск резюме</p>
+<p><img width="44" align="center" src="img/active.PNG" alt="checkbox"> Успешная авторизацияn</p>
+
+## Список проверок, реализованных mobile tests:
+<p><img width="44" align="center" src="img/active.PNG" alt="checkbox"> Успешная авторизация</p> 
+<p><img width="44" align="center" src="img/active.PNG" alt="checkbox"> Неуспешная авторизация</p>
+<p><img width="44" align="center" src="img/active.PNG" alt="checkbox"> Проверка резюме</p>
+<p><img width="44" align="center" src="img/active.PNG" alt="checkbox"> Сообщение в тех.поддержку</p>
+
 ## Используемый стэк
 
 ![img_2.png](img/img_2.png)
