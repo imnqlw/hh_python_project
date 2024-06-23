@@ -90,9 +90,9 @@
 
 
 
-## [Allure отчет](https://jenkins.autotests.cloud/job/hh_python_project/29/allure/)![img_5.png](img/img_5.png)
+## [Allure отчет](https://jenkins.autotests.cloud/job/hh_python_project/29/allure/)![img/allure.PNG](img/allure.PNG)
 
-![allure.png](img/allure.png)
+![allure2.png](img/allure2.png)
 
 
 ### [Результат прохождения теста Allure TestOps](https://allure.autotests.cloud/project/4299/dashboards)![allure_tes.png](img/allure_tes.png)
