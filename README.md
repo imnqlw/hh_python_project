@@ -59,8 +59,7 @@
 
 ### Запуск автотестов в Jenkins:
 1. Открыть [проект](https://jenkins.autotests.cloud/job/hh_python_project/)
-2. Build with Parameters ![jek1.png](img/jek1.png)
-3. Нажать кпопку Build ![jek2.png](img/jek2.png)
+2. Нажать кпопку Build ![jek1.png](img/jek1.png)
 
 
 <h2 id="run-tests"><img width="40" align="center" src="img/run-tests.png" alt="run"> Run tests</h2>
