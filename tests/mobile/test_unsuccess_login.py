@@ -11,7 +11,6 @@ text = os.getenv('text')
 load_dotenv()
 
 
-
 @allure.epic('unsuccess login')
 @allure.story('unsuccess login')
 @allure.feature('unsuccess login')
@@ -20,10 +19,12 @@ load_dotenv()
 @allure.severity('normal')
 def test_unsuccess_login():
     with allure.step('Click button  have account'):
-        browser.element((AppiumBy.ID, 'ru.hh.android:id/fragment_intentions_onboarding_choose_direction_button_have_account')).click()
+        browser.element((AppiumBy.ID,
+                         'ru.hh.android:id/fragment_intentions_onboarding_choose_direction_button_have_account')).click()
 
     with allure.step('Click button use mail/pass'):
-        browser.element((AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().className("android.view.View").instance(3)')).click()
+        browser.element(
+            (AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().className("android.view.View").instance(3)')).click()
     with allure.step('Login'):
         browser.element((AppiumBy.ID, 'ru.hh.android:id/view_hh_button_title_text_view')).click()
 
@@ -37,9 +38,6 @@ def test_unsuccess_login():
         browser.element((AppiumBy.ID, 'ru.hh.android:id/view_title_button_button')).click()
 
     with allure.step('unsuccess login'):
-        browser.element((AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().resourceId("ru.hh.android:id/snackbar_text")')).should(have.text('Неправильные данные для входа. Пожалуйста, попробуйте снова.'))
-
-
-
-
-
+        browser.element(
+            (AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().resourceId("ru.hh.android:id/snackbar_text")')).should(
+            have.text('Неправильные данные для входа. Пожалуйста, попробуйте снова.'))

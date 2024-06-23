@@ -10,7 +10,6 @@ passw = os.getenv('passw')
 load_dotenv()
 
 
-
 @allure.epic('Login')
 @allure.story('Login')
 @allure.feature('Login')

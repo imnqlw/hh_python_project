@@ -1,4 +1,3 @@
-
 import allure
 
 from hh_project.pages.page_api import hh_api
