@@ -92,7 +92,7 @@
 ## [Видео прохождения автотестов](https://selenoid.autotests.cloud/video/93ce3d0fe17922d2d1efc4071cda460d.mp4) ![img_3.png](img/img_3.png)
 <img title="Selenoid" src="img/sc.gif"/>
 
-## [Видео прохождение автотестов в мобильной версии](img/resume.gif) ![img/resume.gif](img/resume.gif)
+## [Видео прохождение автотестов в мобильной версии](https://app-automate.browserstack.com/sessions/b3d62e0db045e959bb26dd668defc6d081ca2f51/video?token=YzJLVjFKVXNRRTNyQ1g5OEVldk5BdUE5NCtBOHdJSWtqcHQvNzluQk1CamRKRm8yTmNlTm56N2hib0xlc2svS0JYZFVpTFovNzFKTlVnSWRndzNZeHc9PS0teVhzQUhXVzVpUHY2NklYUTI5Sy9UUT09--95eeee272e828880de2260c22359b8ccab0d8203&source=rest_api&diff=1.044777313) ![img/resume.gif](img/resume.gif)
 
 
 
