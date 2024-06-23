@@ -4,8 +4,6 @@ from appium.webdriver.common.appiumby import AppiumBy
 from selene import browser, have
 
 
-
-
 @allure.epic('Resume')
 @allure.story('Resume')
 @allure.feature('Resume')

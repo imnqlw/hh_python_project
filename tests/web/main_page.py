@@ -26,7 +26,6 @@ class MainPage:
         browser.element('[class="bloko-checkbox__input"][value="name"]+span').click()
         browser.element('[data-qa="vacancysearch__keywords-input"]').set_value('IT').press_enter()
 
-
     @allure.step('Проверка работы с параметрами')
     def check_search_with_parameters(self):
         browser.element('[data-qa="bloko-header-3"]').should(have.text('IT'))
@@ -137,5 +136,6 @@ class MainPage:
     @allure.step('Проверка пофильтрам')
     def check_job(self):
         self.should_have_job()
+
 
 main = MainPage()

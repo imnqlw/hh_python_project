@@ -6,12 +6,12 @@ from hh_project.utils import attach
 from dotenv import load_dotenv
 import os
 
-
 name = os.getenv('name')
 passw = os.getenv('passw')
 text = os.getenv('text')
 wrong_pass = os.getenv('wrong_pass')
 load_dotenv()
+
 
 def pytest_addoption(parser):
     parser.addoption(

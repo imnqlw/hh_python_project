@@ -85,4 +85,3 @@ def test_search_with_parameters():
 def test_promotion_resume():
     main.promotion_resume()
     main.check_promotion_resume()
-

@@ -3,7 +3,6 @@ from appium.webdriver.common.appiumby import AppiumBy
 from selene import browser, have
 
 
-
 @allure.epic('Support')
 @allure.story('Send text in support chat')
 @allure.feature('Support')
