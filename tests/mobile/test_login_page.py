@@ -1,13 +1,7 @@
-import os
-
 import allure
 from appium.webdriver.common.appiumby import AppiumBy
 from selene import browser
-from dotenv import load_dotenv
-
-name = os.getenv('name')
-passw = os.getenv('passw')
-load_dotenv()
+from tests.mobile.conftest import name, passw
 
 
 @allure.epic('Login')

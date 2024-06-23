@@ -1,33 +1,33 @@
 import allure
 
-from hh_project.pages.page_api import hh_api
+from tests.api.pages.home_page import login_page, search_page
 
 
 @allure.tag('web')
 @allure.title('Successful login')
 def test_hh_login():
-    hh_api.login_api()
+    login_page.login_user()
 
 
 @allure.tag('web')
 @allure.title('Search Python')
 def test_search_python():
-    hh_api.search_python()
+    search_page.search_python()
 
 
 @allure.tag('web')
 @allure.title('Search Job')
 def test_search_job():
-    hh_api.search_job()
+    search_page.search_job()
 
 
 @allure.tag('web')
 @allure.title('Select all services')
 def test_all_services():
-    hh_api.all_services()
+    search_page.all_services()
 
 
 @allure.tag('web')
 @allure.title('Not found')
 def test_hh_404():
-    hh_api.not_found()
+    search_page.not_found()

@@ -19,6 +19,28 @@ class MainPage:
     def open(self):
         browser.open('/')
 
+    @allure.step('Поиск работы с параметрами')
+    def search_with_parameters(self):
+        browser.open('/')
+        browser.element('[href="/search/vacancy/advanced?hhtmFrom=main"]').click()
+        browser.element('[class="bloko-checkbox__input"][value="name"]+span').click()
+        browser.element('[data-qa="vacancysearch__keywords-input"]').set_value('IT').press_enter()
+
+
+    @allure.step('Проверка работы с параметрами')
+    def check_search_with_parameters(self):
+        browser.element('[data-qa="bloko-header-3"]').should(have.text('IT'))
+
+    @allure.step('Продвижение резюме')
+    def promotion_resume(self):
+        browser.open('/')
+        browser.element('[data-qa="mainmenu_applicantServices"]').click()
+        browser.element('[href="/applicant/services/findjob"]').click()
+
+    @allure.step('Проверка продвижения резюме')
+    def check_promotion_resume(self):
+        browser.element('[class="promo-h1 promo-page-advantage__title"]').should(have.text('Найти работу быстрее'))
+
     @allure.step('Выбор города')
     def fill_city(self):
         browser.element('.supernova-navi-item_area-switcher-button').click()
@@ -74,6 +96,7 @@ class MainPage:
         browser.element('[data-qa="login-input-password"]').type(passw)
         browser.element('[data-qa="account-login-submit"]').click()
 
+    @allure.step('Проверка авторизации')
     def check_login(self):
         browser.element('[data-qa="mainmenu_applicantProfile"]').click()
         browser.element('[href="/applicant/settings?from=header_new&hhtmFromLabel=header_new&hhtmFrom=main"]').click()
@@ -114,3 +137,5 @@ class MainPage:
     @allure.step('Проверка пофильтрам')
     def check_job(self):
         self.should_have_job()
+
+main = MainPage()

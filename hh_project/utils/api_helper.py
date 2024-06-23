@@ -1,5 +1,5 @@
 from hh_project.utils.attach import response_logging, response_attaching
-
+import requests
 
 def api_request(url, endpoint, method, params=None):
     url = f"{url}{endpoint}"
@@ -11,4 +11,4 @@ def api_request(url, endpoint, method, params=None):
     return response
 
 
-import requests
+

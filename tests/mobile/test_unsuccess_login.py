@@ -1,14 +1,7 @@
-import os
-
+from tests.mobile.conftest import name, wrong_pass
 import allure
 from appium.webdriver.common.appiumby import AppiumBy
 from selene import browser, have
-from dotenv import load_dotenv
-
-name = os.getenv('name')
-wrong_pass = os.getenv('wrong_pass')
-text = os.getenv('text')
-load_dotenv()
 
 
 @allure.epic('unsuccess login')

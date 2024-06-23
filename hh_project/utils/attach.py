@@ -34,7 +34,7 @@ def bstack_video(session_id):
     from config import config as app_config
     bstack_session = requests.get(
         f'https://api.browserstack.com/app-automate/sessions/{session_id}.json',
-        auth=(app_config.userName, app_config.accessKey)
+        auth=(app_config.user_name, app_config.access_key)
     ).json()
 
     video_url = bstack_session['automation_session']['video_url']
