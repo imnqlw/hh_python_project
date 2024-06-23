@@ -64,6 +64,9 @@
 ## [Видео прохождения автотестов](https://selenoid.autotests.cloud/video/93ce3d0fe17922d2d1efc4071cda460d.mp4) ![img_3.png](img/img_3.png)
 <img title="Selenoid" src="img/sc.gif"/>
 
+## [Видео прохождение автотестов в мобильной версии](img/resume.gif) ![img/resume.gif](img/resume.gif)
+
+
 
 
  
