@@ -21,11 +21,13 @@
 ## Используемый стэк
 
 ![img_2.png](img/img_2.png)
+<img src="img/browserstack.png" height="48" width="48" />
 ![img_1.png](img/img_1.png)
 ![img.png](img/img.png)
 ![img_2.png](img/img_22.png)
 ![img_3.png](img/img_353.png)
 ![img_1.png](img/img_111.png)
+
 
 ## Запуск тестов из терминала
 ### Для запуска всех автотестов выполнить в cli:
@@ -39,23 +41,49 @@
 > 
 > 
 ## Проект в Jenkins
-[Jekins](https://jenkins.autotests.cloud/job/hw_14_python_/)
+[Jekins](https://jenkins.autotests.cloud/job/hh_python_project/)
 
 
 ### Запуск автотестов в Jenkins:
-1. Открыть [проект](https://jenkins.autotests.cloud/job/hw_14_python_/)
+1. Открыть [проект](https://jenkins.autotests.cloud/job/hh_python_project/)
+2. Build with Parameters ![jek1.png](img/jek1.png)
+3. Нажать кпопку Build ![jek2.png](img/jek2.png)
 
 
-2. Нажать кпопку ![img_1.png](img/bn.png)
+<h2 id="run-tests"><img width="40" align="center" src="img/run-tests.png" alt="run"> Run tests</h2>
+<p><b>For web tests:</b></p>
+<pre>
+    pytest tests/web
+</pre>
+<p><b>For API tests:</b></p>
+<pre>
+    pytest tests/api
+</pre>
+<p><b>For mobile tests on emulator:</b></p>
+<pre>
+    pytest tests/mobile --context=local_emulator
+</pre>
+<p><b>For mobile tests on real device:</b></p>
+<pre>
+    pytest tests/mobile --context=real_local
+</pre>
+<p><b>For mobile tests on bstack:</b></p>
+<pre>
+    pytest tests/mobile --context=bstack
+</pre>
 
 
-## [Allure отчет](https://jenkins.autotests.cloud/job/hw_14_python_/13/allure/)![img_5.png](img/img_5.png)
+
+
+
+
+## [Allure отчет](https://jenkins.autotests.cloud/job/hh_python_project/29/allure/)![img_5.png](img/img_5.png)
 
 ![img.png](img/allure.png)
 
 
-### [Результат прохождения теста](https://jenkins.autotests.cloud/job/hw_14_python_/13/allure/#suites)![img_4.png](img/img_4.png)
-![img.png](img/allure2.png)
+### [Результат прохождения теста Allure TestOps](https://allure.autotests.cloud/project/4299/dashboards)![allure_tes.png](img/allure_tes.png)
+
 
 <h2 id="telegram-notification">Оповещения в Telegram <img width="40" align="center" src="img/tt.png" alt="exapmle"></h2>
 
