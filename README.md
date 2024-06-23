@@ -96,7 +96,7 @@
 
 ### [Результат прохождения теста Allure TestOps](https://allure.autotests.cloud/project/4299/dashboards)![allure_tes.png](img/allure_tes.png)
 
-### [Проект в Jira]![jirra.png](img/jirra.png)
+### [Проект в Jira]![jira.PNG](img/jira.PNG)
 
 
 
