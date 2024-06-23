@@ -90,7 +90,7 @@
 
 
 
-## [Allure отчет](https://jenkins.autotests.cloud/job/hh_python_project/29/allure/)![img/allure.PNG](img/allure.PNG)
+### [Allure отчет](https://jenkins.autotests.cloud/job/hh_python_project/29/allure/)![allure.PNG](img/allure.PNG)
 
 ![allure2.png](img/allure2.png)
 
