@@ -1,6 +1,5 @@
 import allure
-from selene import command
-from selene import browser, have
+from selene import browser, have, command
 
 
 @allure.tag("WEB")
