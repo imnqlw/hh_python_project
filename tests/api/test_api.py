@@ -17,17 +17,17 @@ def test_search_python(base_api_url):
 
 @allure.tag('web')
 @allure.title('Search Job')
-def test_search_job():
-    search_page.search_job()
+def test_search_job(base_api_url):
+    search_page.search_job(base_api_url)
 
 
 @allure.tag('web')
 @allure.title('Select all services')
-def test_all_services():
-    search_page.all_services()
+def test_all_services(base_api_url):
+    search_page.all_services(base_api_url)
 
 
 @allure.tag('web')
 @allure.title('Not found')
-def test_hh_404():
-    search_page.not_found()
+def test_hh_404(base_api_url):
+    search_page.not_found(base_api_url)
