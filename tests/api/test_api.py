@@ -1,6 +1,6 @@
 import allure
-
-from tests.api.pages.home_page import login_page, search_page
+from hh_project.pages.api.login_page import login_page
+from hh_project.pages.api.search_page import search_page
 
 
 @allure.tag('web')

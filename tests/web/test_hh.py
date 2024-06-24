@@ -1,6 +1,7 @@
 import allure
 
-from tests.web.main_page import MainPage, main
+from hh_project.pages.web.login_page import login_page
+from hh_project.pages.web.main_page import main
 
 
 @allure.tag("WEB")
@@ -23,8 +24,8 @@ def test_search_city():
 @allure.label('owner')
 @allure.severity('high')
 def test_login():
-    main.login()
-    main.check_login()
+    login_page.login()
+    login_page.check_login()
 
 
 @allure.title('Поиск компании')

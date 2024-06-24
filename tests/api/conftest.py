@@ -1,7 +1,10 @@
-import pytest
+import os
+from dotenv import load_dotenv
 
 
-@pytest.fixture()
-def base_api_url():
-    base_url = 'https://hh.ru'
-    return base_url
+base_url = 'https://hh.ru/'
+name = os.getenv('name')
+passw = os.getenv('passw')
+text = os.getenv('text')
+wrong_pass = os.getenv('wrong_pass')
+load_dotenv()
