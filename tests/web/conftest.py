@@ -38,12 +38,13 @@ def setup_browser(request):
 
     login = os.getenv('LOGIN')
     password = os.getenv('PASSWORD')
+    url = os.getenv('base_url')
 
     driver = webdriver.Remote(
         command_executor=f"https://{login}:{password}@selenoid.autotests.cloud/wd/hub",
         options=options
     )
-    browser.config.base_url = 'https://hh.ru/?customDomain=1'
+    browser.config.base_url = f'{url}/?customDomain=1'
     browser.config.window_width = 1920
     browser.config.window_height = 1080
     browser.config.driver = driver

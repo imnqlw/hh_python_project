@@ -5,14 +5,14 @@ from hh_project.pages.api.search_page import search_page
 
 @allure.tag('web')
 @allure.title('Successful login')
-def test_hh_login():
-    login_page.login_user()
+def test_hh_login(base_api_url):
+    login_page.login_user(base_api_url)
 
 
 @allure.tag('web')
 @allure.title('Search Python')
-def test_search_python():
-    search_page.search_python()
+def test_search_python(base_api_url):
+    search_page.search_python(base_api_url)
 
 
 @allure.tag('web')
