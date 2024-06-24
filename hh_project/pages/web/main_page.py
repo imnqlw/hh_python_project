@@ -1,14 +1,10 @@
 import allure
 from selene import command
 from selene import browser, have
-from dotenv import load_dotenv
 
 
 @allure.tag("WEB")
 class MainPage:
-
-    def load_env(self):
-        load_dotenv()
 
     @allure.step('Открытие страницы')
     def open(self):
