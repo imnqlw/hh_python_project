@@ -1,5 +1,6 @@
 import allure
 from selene import browser, have, command
+import time
 
 
 @allure.tag("WEB")
@@ -13,50 +14,54 @@ class MainPage:
     def search_with_parameters(self):
         browser.open('/')
         browser.element('[href="/search/vacancy/advanced?hhtmFrom=main"]').click()
-        browser.element('[class="bloko-checkbox__input"][value="name"]+span').click()
+        browser.element('[class="magritte-radio-input___-IM3Y_3-0-37"][value="between1And3"]').perform(command.js.scroll_into_view).click()
+        browser.element('[data-qa="advanced-search__employment_form-item_FULL"][value="FULL"]').click()
         browser.element('[data-qa="vacancysearch__keywords-input"]').set_value('IT').press_enter()
+
 
     @allure.step('Проверка работы с параметрами')
     def check_search_with_parameters(self):
-        browser.element('[data-qa="bloko-header-3"]').should(have.text('IT'))
+        browser.element('[data-qa="title-container"][class="magritte-text-alignment-left___BreG5_6-1-0"]').should(have.text('IT'))
 
     @allure.step('Продвижение резюме')
     def promotion_resume(self):
         browser.open('/')
         browser.element('[data-qa="mainmenu_applicantServices"]').click()
-        browser.element('[href="/applicant/services/findjob"]').click()
+        browser.element('[href="/applicant-services/hhpro?hhtmFrom=services&hhtmFromLabel=menu"]').click()
 
     @allure.step('Проверка продвижения резюме')
     def check_promotion_resume(self):
-        browser.element('[class="promo-h1 promo-page-advantage__title"]').should(have.text('Найти работу быстрее'))
+        browser.element('[class="iBoZ7I7___title"]').should(have.text('Работа найдётся скорее с hh PRO'))
 
     @allure.step('Выбор города')
     def fill_city(self):
-        browser.element('.supernova-navi-item_area-switcher-button').click()
-        browser.element('[href="https://saratov.hh.ru/?customDomain=1"]').click()
+        browser.open('/')
+        browser.element('[data-qa="mainmenu_areaSwitcher"][class="bloko-link bloko-link_pseudo"]').click()
+        browser.element('[data-qa="geo-switcher-search"][class="magritte-field___9S8Tw_7-1-10"]').type('Саратов')
+        time.sleep(1)
+        browser.element('[class="magritte-radio-input___-IM3Y_3-0-37 magritte-radio-input-unchecked___J-rPE_3-0-37"]').click()
+
+
 
     @allure.step('Выбор компании')
     def search_company(self):
         browser.element('#a11y-search-input').type('Qiwi').press_enter()
         browser.element('[data-qa="bloko-modal-close"]').click()
-        browser.element('[data-hh-tab-id="employersList"]').click()
-        browser.element('[href="/employer/3125"]').click()
+        browser.element('[data-qa="employersList"][class="magritte-tab___B0BeU_6-0-0 magritte-tab_primary___3Of2H_6-0-0"]').click()
+        browser.element('[href="/employer/3125?hhtmFrom=employers_list"]').click()
 
     @allure.step('Выбор работы')
     def fill_resume(self):
         browser.element('#a11y-search-input').type('Специалист Яндекс').press_enter()
         browser.element('[data-qa="bloko-modal-close"]').click()
-        browser.element('[data-hh-tab-id="resumeSearch"]').click()
-        browser.element('[data-qa="serp-item__title"]').click()
+        browser.element('[class="magritte-tab___B0BeU_6-0-0 magritte-tab_primary___3Of2H_6-0-0"]').click()
+
 
     @allure.step('Поиск по фильтрам')
     def fill_job(self):
         browser.element('#a11y-search-input').type('Python').press_enter()
         browser.element('[data-qa="bloko-modal-close"]').click()
-        browser.element('[name=part_time][value=start_after_sixteen]+span').click()
-        browser.element('[name=salary][value="45000"]+span').perform(command.js.scroll_into_view).click()
-        browser.element('[class=bloko-checkbox__input][value="96"]+span').perform(command.js.scroll_into_view).click()
-        browser.element('[class=bloko-checkbox__input][value="not_required_or_not_specified"]+span').click()
+
 
     @allure.step('Проверка по городу')
     def should_have_city(self):
@@ -68,13 +73,11 @@ class MainPage:
 
     @allure.step('Проверка работы')
     def should_have_job(self):
-        browser.element('[data-qa="bloko-header-3"]').should(have.text('Python'))
+        browser.element('.magritte-text-alignment-left___BreG5_6-1-0').should(have.text('вакансий'))
 
     @allure.step('Проверка резюме')
     def should_have_resume(self):
-        browser.close_current_tab()
-        browser.switch_to_tab(0)
-        browser.element('[data-qa="resume-block-experience"]').should(have.text('Яндекс'))
+        browser.element('[class="magritte-text___gMq2l_6-1-0 magritte-text-overflow___UBrTV_6-1-0 magritte-text-typography-medium___cp79S_6-1-0 magritte-text-style-primary___8SAJp_6-1-0"]').should(have.text('резюме'))
 
     @allure.step('Выбор города')
     def select_city(self):

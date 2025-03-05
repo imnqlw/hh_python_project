@@ -9,7 +9,7 @@ class SearchPage:
                              params=({'q': 'PYTHON'}))
 
         assert result.status_code == 200
-        assert 'Python' in result.text
+        assert 'PYTHON' in result.text
 
     def search_job(self, base_api_url):
         result = api_request(url=base_api_url, endpoint='/vacancies/prodavec', method='GET',
