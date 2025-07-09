@@ -1,7 +1,7 @@
 # Автотесты для сайта hh.ru
 
 [hh.ru](https://hh.ru/)
-![img_1.png](img/hh.PNG)
+![img_1.png](img/h.png)
 
 ## Особенности проекта
 
