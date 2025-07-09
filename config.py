@@ -23,7 +23,7 @@ class Config(BaseModel):
         if context in ['local_emulator', 'local_real']:
             options.set_capability('remote_url', self.remote_url)
             options.set_capability('app', self.app_local)
-            options.set_capability('udid', self.udid)
+            #options.set_capability('udid', self.udid)
 
         if context == 'bstack':
             options.set_capability('remote_url', self.remote_url)
